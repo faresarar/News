@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/models/category_model.dart';
+
+import '../models/category_model.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({super.key, required this.categoryModel});
-  final CategoryModel categoryModel ;
+  final CategoryModel categoryModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,12 +13,12 @@ class CategoryCard extends StatelessWidget {
         height: 100,
         width: 200,
         decoration: BoxDecoration(
-            image:  DecorationImage(
+            image: DecorationImage(
               image: AssetImage(categoryModel.image),
               fit: BoxFit.fill,
             ),
             borderRadius: BorderRadius.circular(16)),
-        child:  Center(
+        child: Center(
           child: Text(
             categoryModel.categoryName,
             style: const TextStyle(
