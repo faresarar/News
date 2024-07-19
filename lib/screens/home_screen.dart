@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/categories_list_view.dart';
+import '../widgets/news_list_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,6 +25,7 @@ class HomeScreen extends StatelessWidget {
               .transparent, // to make it transparent and take color of body
           elevation: 0, // to remove shadow
         ),
-        body: const CategoriesListView());
+        body: const NewsListView());
   }
 }
+
