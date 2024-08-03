@@ -13,7 +13,7 @@ class CategoryCard extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return const CategoryScreen();
+              return  CategoryScreen(category: categoryModel.categoryName,);
             },
           ),
         );
