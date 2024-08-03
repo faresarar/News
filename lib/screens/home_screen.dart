@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/widgets/categories_list_view.dart';
-import 'package:news_app/widgets/news_tile.dart';
+import '../widgets/news_list_view_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
             Colors.transparent, // to make it transparent and take color of body
         elevation: 0, // to remove shadow
       ),
-      body: const Padding(
+      body:  const Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),
@@ -38,10 +38,12 @@ class HomeScreen extends StatelessWidget {
                 height: 16,
               ),
             ),
-           // NewsTile(),
+            NewsListViewBuilder(),
           ],
         ),
       ),
     );
   }
 }
+
+
