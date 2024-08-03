@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import '../models/article_model.dart';
 
 class NewsService {
-  final Dio dio;
+  final Dio dio  ;
 
   NewsService(this.dio);
   Future<List<ArticleModel>> getNews() async {

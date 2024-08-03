@@ -8,48 +8,40 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                "News ",
-                style: TextStyle(color: Colors.black),
-              ),
-              Text(
-                " Cloud",
-                style: TextStyle(color: Colors.orange),
-              ),
-            ],
-          ),
-          backgroundColor: Colors
-              .transparent, // to make it transparent and take color of body
-          elevation: 0, // to remove shadow
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "News ",
+              style: TextStyle(color: Colors.black),
+            ),
+            Text(
+              " Cloud",
+              style: TextStyle(color: Colors.orange),
+            ),
+          ],
         ),
-        body: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: CustomScrollView(
-              physics: BouncingScrollPhysics(),
-              slivers: [
-                CategoriesListView(),
-                SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 16,
-                  ),
-                ),
-                NewsTile(),
-              ],
-            )
-            /*Column(
-            children: [
-              CategoriesListView(),
-              SizedBox(
+        backgroundColor:
+            Colors.transparent, // to make it transparent and take color of body
+        elevation: 0, // to remove shadow
+      ),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            CategoriesListView(),
+            SliverToBoxAdapter(
+              child: SizedBox(
                 height: 16,
               ),
-              NewsListView(),
-            ],
-          ),*/
-            ));
+            ),
+           // NewsTile(),
+          ],
+        ),
+      ),
+    );
   }
 }
